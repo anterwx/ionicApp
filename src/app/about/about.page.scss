@@ -1,1 +1,21 @@
+.slideItem{
+    height: 300px;
+}
 
+.slideItem{
+    &:nth-child(1){
+        background-color: coral;
+    }
+    &:nth-child(2){
+        background-color: darkorange;
+    }
+    &:nth-child(3){
+        background-color: rgb(80, 170, 255);
+    }
+    &:nth-child(4){
+        background-color: rgb(80, 255, 211);
+    }
+    &:nth-child(5){
+        background-color:chartreuse;
+    }
+}
