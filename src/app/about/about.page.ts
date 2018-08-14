@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { Slides, Slide } from '@ionic/angular';
+import { Slides, NavController, ModalController } from '@ionic/angular';
+import { SearchPage } from './search/search.page';
 
 @Component({
   selector: 'app-about',
@@ -11,42 +12,56 @@ export class AboutPage {
   @ViewChild(Slides) slides: Slides;
 
   //slides的配置项
-  slideOpts:any = {
-    autoplay:true,
+  slideOpts: any = {
+    autoplay: true,
     slidesPerView: 'auto',
-    centeredSlides:true,
-    spaceBetween:15
+    centeredSlides: true,
+    spaceBetween: 15
   };
+
+  constructor(public navController:NavController,public modalCtrl:ModalController){}
 
   //滑动到第二个滑块
   goToSlide(index) {
     this.slides.slideTo(index, 1000);
-    console.log('swipe '+index+' is active.');
+    console.log('swipe ' + index + ' is active.');
   }
   //swipe初始化完成后回调
-  slideLoaded(){
+  slideLoaded() {
     console.log('Swipe initialization.')
     this.slides.update();
   }
   //监听滑块变化事件
-  slideChanged(){
+  slideChanged() {
     let currentSlideIndex = this.slides.getActiveIndex();
-    console.log('The current slide Index is ' , currentSlideIndex);
+    console.log('The current slide Index is ', currentSlideIndex);
   }
   //当点击滑块时
-  slideTap(){
-    
+  slideTap() {
+
   }
   //当触摸开始时
-  slideTouchStart(){
+  slideTouchStart() {
     this.slides.stopAutoplay();
   }
   //当触摸结束后
-  slideTouchEnd(){
+  slideTouchEnd() {
     this.slides.startAutoplay();
   }
   //页面渲染完后
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     console.log(this.slides);
+  }
+
+
+  foucs(){
+    this.navController.goForward('/search');
+    // const modal = await this.modalCtrl.create({
+    //   component:SearchPage,
+    //   componentProps:{
+    //     value:3
+    //   }
+    // })
+    // return await modal.present();
   }
 }

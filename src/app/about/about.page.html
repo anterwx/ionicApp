@@ -1,11 +1,11 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>About</ion-title>
+<ion-header class="header">
+  <ion-toolbar class="toolbar" style="border-bottom-width:0;border-bottom:none;">
+    <ion-searchbar (ionFocus)="foucs()"  type="search" placeholder="搜索书名..."></ion-searchbar>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <ion-slides class="slideContainer" (ionSlidesDidLoad)="slideLoaded()" (ionSlideTap)="slideTap()" (ionSlideDidChange)="slideChanged()" pager="true" [options]="slideOpts">
+  <ion-slides class="slideContainer" (ionSlidesDidLoad)="slideLoaded()" (ionSlideTap)="slideTap()" (ionSlideDidChange)="slideChanged()"
+    pager="true" [options]="slideOpts">
     <ion-slide class="slideItem">
       <h1>Slide 1</h1>
     </ion-slide>
