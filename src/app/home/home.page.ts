@@ -19,5 +19,6 @@ export class HomePage {
       // this.navController.goForward('/tabs/(contact:contact)',true);
 
       this.navController.goForward('/test',true);
+      // this.navController.goForward('/tabs/(test:home)')
   }
 }
