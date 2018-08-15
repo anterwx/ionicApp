@@ -192,6 +192,12 @@
   dependencies:
     "@types/cordova" latest
 
+"@ionic-native/screen-orientation@5.0.0-beta.14":
+  version "5.0.0-beta.14"
+  resolved "http://registry.npm.taobao.org/@ionic-native/screen-orientation/download/@ionic-native/screen-orientation-5.0.0-beta.14.tgz#906cf02443a9b8742d5aa573d3d3959cf2f4812e"
+  dependencies:
+    "@types/cordova" latest
+
 "@ionic-native/splash-screen@5.0.0-beta.14":
   version "5.0.0-beta.14"
   resolved "http://registry.npm.taobao.org/@ionic-native/splash-screen/download/@ionic-native/splash-screen-5.0.0-beta.14.tgz#a8f436236b1984b23bea34820db029e1464eba8d"
@@ -2171,6 +2177,10 @@ cordova-lib@8.0.0:
 cordova-plugin-nativestorage@^2.3.2:
   version "2.3.2"
   resolved "http://registry.npm.taobao.org/cordova-plugin-nativestorage/download/cordova-plugin-nativestorage-2.3.2.tgz#d6a1d50632aff2a70227102f68bc605e91aabca2"
+
+cordova-plugin-screen-orientation@^3.0.1:
+  version "3.0.1"
+  resolved "http://registry.npm.taobao.org/cordova-plugin-screen-orientation/download/cordova-plugin-screen-orientation-3.0.1.tgz#75a357ce2938081e8f61d4605394b6d77463c1f8"
 
 cordova-registry-mapper@^1.1.8:
   version "1.1.15"
